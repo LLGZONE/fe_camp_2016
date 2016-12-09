@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>登陆界面</title>
+    <style media="screen">
+        img{
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            right: 0;
+            top: 0;
+        }
+        .bd{
+            background-image: url("../../img/2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 800px;
+        }
+        .bk{
+            background-image: url("../../img/123.jpg");
+            background-repeat: no-repeat;
+             background-size: auto;
+            border: 3px solid #0000ff;
+            border-radius: 4px;
+            width: 300px;
+            height: 130px;
+            margin: 15% auto;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            font-size: medium;
+            font-style: italic;
+        }
+        .fm{
+            margin-left: 20px;
+        }
+        input{
+            margin: 5px;
+            width: 250px;
+        }
+        .bt{
+            float: right;
+            position: relative;
+            right: 20px;
+            width: 50px;
+        }
+        .bt:hover, input:hover{
+            border-color: black;
+        }
+        input,.bt{
+            border: blue 3px solid;
+            border-radius: 3px;
+        }
+        .tag{
+            width: 130px;
+            height: 40px;
+            border: solid #ffdc3e 3px;
+            border-radius: 3px;
+            background-color: white;
+            position: absolute;
+            right: 200px;
+            top: 100px;
+        }
+        .tag::before,.tag::after{
+            content: "";
+            position: absolute;
+            left: 130px;
+            top: 20px;
+            border: 10px solid;
+            border-color: transparent transparent transparent #ffdc3e;
+        }
+        .tag:after{
+            left: 126px;
+            border-color:  transparent transparent transparent white;
+        }
+    </style>
+  </head>
+  <body class="bd">
+  <img src="../../img/bk.png">
+  <div class="tag">
+      <p>请输入账号密码，来加入我们吧^-^</p>
+  </div>
+    <div class="bk">
+        <form class="fm">
+       <p> 用户名：</p>
+            <input type="text" placeholder="用户名" name="name" class="inp">
+            <br>
+            <p>
+                密码：
+            </p>
+            <input type="password" name="password" placeholder="密码" class="inp">
+            <br>
+            <button type="button" class="bt">确认</button>
+        </form>
+    </div>
+  </body>
+</html>
