@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<!--修改说明：标签语义化，css书写规范化，删去多余的css属性-->
+  <head>
+    <meta charset="utf-8">
+    <title>google</title>
+    <style media="screen">
+      body, a {
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        overflow: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        opacity: .65;
+      }
+
+      a:hover, a:active {
+        text-decoration: underline;
+        opacity: .85;
+      }
+
+      a:visited {color: #609;}
+
+      .head-sign-in,
+      .head-a, .head-app,
+      .head-site-in,
+      .voice, .say,
+      .foot-left,
+      .foot-right {
+        display: inline-block;
+      }
+
+      .opacity {opacity: 1;}
+
+
+
+      .head-sign-in{padding-left: 15px;}
+
+      .head-a {
+        color: white;
+        background-color: #4285f4;
+        font-weight: bold;
+        padding: 0 12px;
+        line-height: 28px;
+        border: 1px #4285f4 solid;
+        border-radius: 2px;
+      }
+
+      .head-a:hover, .head-a:active {
+        text-decoration: none;
+        cursor: default;
+      }
+
+      .head-app {
+        width: 30px;
+        height: 30px;
+      }
+
+      .head-app-img {
+        background-image: url('http://ssl.gstatic.com/gb/images/i1_1967ca6a.png');
+        background-position: -132px -38px;
+      }
+
+      .head-site {
+        display: flex;
+        padding-right: 15px;
+        flex: 0 1 auto;
+      }
+
+      .head-site-in {padding-left: 15px;}
+
+      .head {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        width: 100%;
+      }
+
+      .head-right {
+        position: relative;
+        float: right;
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+
+
+
+      .gg-img {
+        height: 233px;
+        margin-top: 89px;
+      }
+
+      .gg-img > img {
+        height: 92px;
+        width: 272px;
+        padding-top: 109px;
+      }
+
+      .search-form {
+        position: absolute;
+        top: 311px;
+        width: 100%;
+      }
+
+      .search-container {
+        position: relative;
+        height: 43px;
+        padding-top: 8px;
+        padding-left: 173px;
+        padding-right: 173px;
+      }
+
+      .search-input {
+        padding-bottom: 2px;
+        padding-top: 3px;
+        margin-top: -2px;
+        width: 590px;
+        height: 38px;
+        line-height: 40px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+        transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .input-container {
+        position: relative;
+        bottom: 6px;
+        left: 2px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        height: 100%;
+        width: 580px;
+        padding: 5px 2px 0;
+      }
+
+       .input {
+        line-height: 32px;
+        outline: none;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        width: 93%;
+        height: auto;
+      }
+
+      .voice {
+        float: right;
+        padding: 0 8px;
+        position: static;
+      }
+
+      .say {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACrElEQVR42u2Xz2sTQRSAX8VSb1K8iNqKooJH2Ux6Ksn+iPQqxZMIehJB0do/IMhmQWsvHr2KSEGk0tSLIoWIYNUKij20F2/N7iaUZnYT0kYzzhMKs0HDJiTdLcwHDwKZSd63781LBiQSSW9JZdkhzfKm1Rz9mjZp/W9YdEU3vXv4HsQZ40FtNG36q5rls//Ej4tmbSS2T15Mvp3ExOPmEMQNbBtMMEyoljcFcQN7PqyAlqNfIG7gYQ0tYNIaxA1MrJPY3wImbUqBKAXSFv0tBSIVMOkvKRDtGKWN/T6FdqRAxFNoWwpEPIXqUqBT6ALU/UVgu8GW4GD3f6f9TRDYNJTDrk7YbtiqUumHwIYoUJuHERDAS0r4CvgFECgbY+cFAR7KT+g1POmCKFDNw6WggHc3fBtVb4CAoyauBgXIG+g1Xh5mRAGah6cggBd11fK/h7lOprIs0H6uRl6KAo5O7kOv4QmPiwJ4Jqqv4FiwCtXjvD2+tRmfK6kZ/ygI2HritK0rDVGgrClJ6DWMwYC/AGuCBMYcIC2V0CzvjmbRz3j3xUjn6CfeYreUJ2wQkGD75INPX1mFfsEFrrcIYCvdhC4paWQakxajpJMr0C9YFg54i7AsClRmh9/xnr0NHcInzZStk2aLwAcGMAD9pPIazvFKVDD5rdnhJeHLX5RTyRPQHpz5o66emMc9wdlPtvA8wF7Aq2BUHh1525qEo5JtR1WeOXpickO9cJIpyuD6xJmhYiZ5ytWSl3mlnuOaf+2zDaLDXmJrSgZ/MYVEugo+gSh+FkSBa4yd5Ul87DZ5XpFl/AyIEjzYjkau8WqshU2cr13HPbgX4gJOD97n465GZlyVvC9mSKloKI2iTnbwNT+gBX54H+IaXAtxJzE3ycSAFqSAFJACUkAikXD+AHj5/wx2o5osAAAAAElFTkSuQmCC') no-repeat -3px 0;
+        background-size: 24px 24px;
+        vertical-align: middle;
+        height: 23px;
+        width: 18px;
+      }
+
+      .button-container {padding-top: 18px;}
+
+      input[type = "submit"] {
+        height: 36px;
+        line-height: 27px;
+        background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+        background-color: #f2f2f2;
+        color: #757575;
+        border: 1px solid #f2f2f2;
+        border-radius: 2px;
+        cursor: default;
+        font-weight: bold;
+        margin: 11px 4px;
+        padding: 0 16px;
+        text-align: center;
+      }
+
+      input[type = "submit"]:focus {border: 1px solid #4d90fe;}
+
+      input[type = "submit"]:hover {
+        background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+        background-color: #f8f8f8;
+        border: 1px solid #c6c6c6;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        color: #222;
+      }
+
+
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: small;
+        background: #f2f2f2;
+        border-top: 1px solid #e4e4e4;
+      }
+
+      .foot-right {
+        float: right;
+        margin-right: 30px;
+      }
+
+      .foot-left a, .foot-right a {
+        display: inline-block;
+        padding-left: 27px;
+        color: #666;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+      <header class="head">
+        <nav class="head-right">
+          <div class="head-site">
+              <a href="https://mail.google.com/mail/?tab=wm">Gmail</a>
+            <div class="head-site-in">
+              <a href="https://www.google.com/imghp?hl=en&tab=wi&ei=U2OBWJ3oJIb48gXlnY3oBQ&ved=0EKouCBcoAQ">Images</a>
+            </div>
+          </div>
+          <a href="https://www.google.com/intl/en/options/" title="Google APPS" class="head-app-img head-app"></a>
+          <div class="head-sign-in">
+            <a class="head-a opacity" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/">Sign in</a>
+          </div>
+        </nav>
+      </header>
+      <article>
+        <center>
+        <section class="gg-img">
+          <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google">
+        </section>
+        <div class="search-form">
+          <form>
+            <section class="search-container">
+                <div class="search-input">
+                  <div class="input-container">
+                    <input type="text" name="q" maxlength="2048" title="Search" class="input">
+                    <div class="voice">
+                      <a href="#" class="opacity"><span class="say"></span></a>
+                    </div>
+                  </div>
+              </div>
+            </section>
+            <section class="button-container">
+              <center>
+                <input type="submit" value="Google Search">
+                <input type="submit" value="I'm Feeling Lucky">
+              </center>
+            </section>
+          </form>
+        </div>
+      </center>
+    </article>
+      <footer class="footer">
+        <nav class="foot-left">
+          <a href="//www.google.com/intl/en/ads/?fg=1">Advertising</a>
+          <a href="//www.google.com/services/?fg=1">Business</a>
+          <a href="//www.google.com/intl/en/about.html?fg=1">About</a>
+        </nav>
+        <nav class="foot-right">
+          <a href="//www.google.com/intl/en/policies/privacy/?fg=1">Privacy</a>
+          <a href="//www.google.com/intl/en/policies/terms/?fg=1">Terms</a>
+          <a href="https://www.google.com/preferences?hl=en">Settings</a>
+        </nav>
+      </footer>
+  </body>
+</html>
