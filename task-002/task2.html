@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>换背景</title>
+    <style media="screen">
+    .body-bgx {
+      background-image: url('img/xx-bg.png');
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+	.body-bgb {
+	  background-image: url('img/bw-bg.png');
+      background-repeat: no-repeat;
+      overflow: hidden;
+	}
+      #xx,#bw{
+        border-radius: 5px;
+        background-image: url('img/btn-gray.png');
+        width: 230px;
+        height: 40px;
+        font-size: 35px;
+      }
+      #xx:focus,#bw:focus{
+        background-image: url('img/btn-blue.png');
+      }
+      #xx:focus body{
+        background-image: url('img/xx-bg.png');
+      }
+      #xx{
+        position: absolute;
+        top: 200px;
+        left: 300px;
+      }
+      #bw{
+        position: absolute;
+        top: 100px;
+        left: 300px;
+      }
+      .xx{
+        position: absolute;
+        left: 50px;
+        top: 100px;
+      }
+	  img{
+		  width: 200px;
+		  height: 200px;
+	   }
+    </style>
+  </head>
+  <body class="body-bgx">
+    <div>
+      <button id="xx" onclick="xx()">小新</button>
+      <button id="bw" onclick="bw()">巴卫</button>
+    </div>
+    <div>
+      <img src="img/xx.jpg" class="xx" id="a">
+    </div>
+  </body>
+  <script type="text/javascript">
+  var img = document.getElementById("a");
+  function xx(){
+    document.body.className = "body-bgx";
+    img.src = "img\/xx.jpg";
+  }
+  function bw(){
+    document.body.className = "body-bgb";
+    img.src = "img\/bw.png";
+  }
+  </script>
+</html>
