@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>personal</title>
+    <style media="screen">
+      body {
+        background-color: #2A2B29;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      li {
+        list-style: none;
+        display: inline-block;
+      }
+
+      .button {
+        border-radius: 15%;
+        width: 4em;
+        height: 1.5em;
+        background-color: white;
+        text-align: center;
+        font-size: 1.1em;
+      }
+
+      .button a {
+        color: #2A2B29;
+      }
+
+      .button:hover {
+        background-color: #2A2B29;
+      }
+
+      .button:hover a {
+        color: white;
+      }
+
+      img {
+        width: 15%;
+        height: 15%;
+        border-radius: 50%;
+        margin-left: 5%;
+        position: relative;
+        bottom: 2em;
+        display: inline-block;
+      }
+
+      .head {
+        width: 50%;
+        height: 40%;
+        color: white;
+        margin: 0 auto;
+        font-size: 1.2em;
+      }
+
+      .right-div {
+        width: 70%;
+        height: 70%;
+        display: inline-block;
+      }
+
+      .main {
+        width: 45%;
+        height: 70%;
+        background-color: #FEFEFE;
+        margin: 0 auto;
+        margin-bottom: 0;
+      }
+
+      .main p {
+        color: black;
+      }
+
+      .tag {
+        position: relative;
+        line-height: 2em;
+        letter-spacing: 2em;
+        text-align: center;
+        background-color: rgb(169, 215, 238);
+      }
+
+      .tag:after {
+        content: "";
+        border-left: 15px solid rgb(169, 215, 238);
+        border-top: 15px solid  transparent;
+        border-bottom: 15px solid transparent;
+        position: absolute;
+        right: -15px;
+        top: 0px;
+      }
+
+      .tag:before {
+        content: "";
+        border-top: 15px solid rgb(169, 215, 238);
+        border-bottom: 15px solid rgb(169, 215, 238);
+        border-left: 15px solid transparent;
+        position: absolute;
+        top: 0;
+        left: -15px;
+      }
+
+      @media (max-width: 992px) {
+        img {
+          width: 20%;
+          height: 20%;
+        }
+        .head {
+          width: 60%;
+        }
+        .main {
+          width: 57%;
+        }
+      }
+      @media (max-width: 767px) {
+        body{
+          font-size: 15px;
+        }
+        img {
+          width: 30%;
+          height: 30%;
+          top: 1.5em;
+        }
+        .head {
+          width: 70%;
+        }
+        .main {
+          width: 65%;
+        }
+        .tag {
+          letter-spacing: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="head">
+      <img src="http://diy.qqjay.com/u/files/2012/1102/264c66ece24e11b925054578eca54eeb.jpg" alt="个人头像">
+      <div class="right-div">
+        <h1>欢迎，</h1>
+        <p>我的名字是罗淋根，正在学习前端中，希望自己通过四年的学习成为一名前端工程师</p>
+        <p>Contact With Me:</p>
+        <ul>
+          <li class="button"><a href="#">Github</a></li>
+          <li class="button"><a href="#">twitter</a></li>
+          <li class="button"><a href="#">QQ</a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="main">
+      <section>
+        <header>
+          <div class="tag">
+            个人信息
+          </div>
+        </header>
+        <p>性别：男</p>
+        <p>年龄：19</p>
+        <p>邮箱: 985395976@qq.com</p>
+      </section>
+      <section>
+        <header>
+          <div class="tag">
+            教育信息
+          </div>
+        </header>
+        <p>学历：本科</p>
+        <p>学校：华中科技大学</p>
+      </section>
+      <section>
+        <header>
+          <div class="tag">
+            实习与项目经验
+          </div>
+        </header>
+        <p>暂无</p>
+      </section>
+    </article>
+  </body>
+</html>

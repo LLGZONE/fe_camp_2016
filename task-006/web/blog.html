@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>llgzone</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+    <link rel="stylesheet" href="../css/blog.css">
+  </head>
+  <body>
+    <div class="container">
+    <div class="head">
+      LLGBLOG
+    </div>
+      <div class="list">
+        <div class="bo">
+          <a href="#">Js笔记</a>
+        </div>
+        <div class="btw">
+            <a href="#">CSS笔记</a>
+        </div>
+        <div class="btw">
+              <a href="#">HTML5</a>
+        </div>
+        <div class="btw">
+              <a href="#">Canvas画图</a>
+        </div>
+        <div class="bfi">
+            <a href="#">上一页</a>
+        </div>
+        <div class="bff">
+            <a href="#">下一页</a>
+        </div>
+      </div>
+      <div class="bk">
+        <img src="../img/pk.png">
+        <div class="tag">
+          欢迎来到我的个人主页，不管是文章还是网页都希望你喜欢!
+        </div>
+      </div>
+      <div class="foot">
+        <p id="time">
+        </p>
+      </div>
+  </div>
+  </body>
+  <script type="text/javascript">
+      var p = document.getElementById('time');
+      var t = setTimeout(time, 500);
+    function time(){
+      clearTimeout(t);
+      var date = new Date();
+      var y = date.getFullYear();
+      var m = date.getMonth() + 1;
+      var d = date.getDate();
+      var h = date.getHours();
+      var min = date.getMinutes();
+      var s = date.getSeconds();
+      p.innerHTML = "现在是:" +"<br/>"+ y + "年" + m + "月"+ d+"日"+ h +"时"+ min +"分"+s+"秒";
+      var t = setTimeout(time, 500);
+    }
+    time();
+  </script>
+</html>
